@@ -27,11 +27,13 @@
 
 ## Notes:
 
+Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
+
 Serial Numbers and other unique information are being set to 0 in config.plist - Please generate the info and change the data before use.
 
-Use at your own risk, as this set of EFI file only allows you to install, boot into macOS with basic functions. 
-
 I haven't tested if it's suitable to be in your daily driver, and of course, the whole thing is "work in progress"
+
+Use at your own risk, as this set of EFI file only allows you to install, boot into macOS with basic functions. 
 
 ## References:
 
