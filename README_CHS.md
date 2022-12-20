@@ -4,7 +4,7 @@
 
 - CPU: Intel i7-9750H
 - 音频编码: Intel ALC236/3204
-- 网卡: Intel AC9560 + Bluetooth
+- 网卡: Intel AC9560 + 蓝牙
 - 显卡: Intel UHD 630 + ~~nVidia Quadro P620~~
 
 ## 现在可以正常使用的功能:
