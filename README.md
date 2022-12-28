@@ -14,20 +14,28 @@
 ## What works for now, as I have discovered so far:
 
 - Battery Status
-- Audio ALC236/3204
-- Keyboard with Backlight and Audio Fn keys
-- Trackpad with Gestures
+- Audio Input/Output - ALC236/3204
+- Backlight Fn Keys
+- Audio Fn keys
+- Trackpad with Gestures + TrackPoint
 - Wi-Fi (Airportitlwm)
 - Bluetooth
+- Headphone Jack - Need to tune the output balance to extreme left or right
 
 ## What doesn't work & not tested:
 
-- Brightness Fn keys
-- Power Management
-- AirDrop, SideCar, etc.
+- Brightness Fn keys - Working in Progress
+- USB hubs - Working in Progress
+- AirDrop, SideCar, etc. - Limited by Intel Network Adapter
+- Micro SD slot
+- Sleep/Wake when lid Closed/Open (Unsure)
+- Power Management (Unsure)
+- Numpad Calculator related hotkeys
 - Many more which either works but I haven't found out or simply doesn't work
 
 ## Notes:
+
+The fan goes quite hard for most of the time, but it does change the speed based on the temperature of the laptop. This might be related to EC thermal management on my unit as it was set to "Optimal"
 
 Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
 
