@@ -17,15 +17,15 @@
 - Audio Input/Output - ALC236/3204
 - Backlight Fn Keys
 - Audio Fn keys
+- Brightness Fn keys
 - Trackpad with Gestures + TrackPoint
 - Wi-Fi (Airportitlwm)
 - Bluetooth
+- USB hubs
 - Headphone Jack - Need to tune the output balance to extreme left or right
 
 ## What doesn't work & not tested:
 
-- Brightness Fn keys - Working in Progress
-- USB hubs - Working in Progress
 - AirDrop, SideCar, etc. - Limited by Intel Network Adapter
 - Micro SD slot
 - Sleep/Wake when lid Closed/Open (Unsure)
@@ -49,3 +49,4 @@ Use at your own risk, as this set of EFI file only allows you to install, boot i
 
 - OpenCore --> https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html
 - 国光的黑苹果安装教程 --> https://apple.sqlsec.com/
+- Daliansky - OC-little (Translated by 5T33Z0) --> https://github.com/5T33Z0/OC-Little-Translated

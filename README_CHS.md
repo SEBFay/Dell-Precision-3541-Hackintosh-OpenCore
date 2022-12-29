@@ -13,15 +13,15 @@
 - 声卡驱动（输入/输出）- ALC236/3204
 - Fn键盘背光调节
 - Fn音量调节
+- Fn亮度调节
 - 带手势的触摸板 + 指点杆
 - 无线网 (使用Airportitlwm)
 - 蓝牙
+- USB接口 - 正在解决
 - 耳机接口 - 需要将输出平衡调节至极左或极右
 
 ## 现在没发现问题/不能正常使用的功能:
 
-- Fn亮度调节 - 正在解决
-- USB接口 - 正在解决
 - 隔空投送，随航 和其他Intel网卡驱动不支持的功能
 - Micro SD卡接口
 - 盒盖睡眠 + 开盖唤醒 （不确定）
@@ -46,3 +46,4 @@
 
 - 官方OpenCore安装指南 --> https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html
 - 国光的黑苹果安装教程 --> https://apple.sqlsec.com/
+- 黑锅小兵 - OC-little --> https://github.com/daliansky/OC-little
