@@ -14,7 +14,6 @@
 ## What works for now, as I have discovered so far:
 
 - Battery Status
-- Audio Input/Output - ALC236/3204
 - Backlight Fn Keys
 - Audio Fn keys
 - Brightness Fn keys
@@ -22,20 +21,25 @@
 - Wi-Fi (Airportitlwm)
 - Bluetooth
 - USB hubs
-- Headphone Jack - Need to tune the output balance to extreme left or right
+- Audio onboard Input/Output - ALC236/3204
+- Combo Jack output - Need to tune the output balance to extreme left or right
 
 ## What doesn't work & not tested:
 
 - AirDrop, SideCar, etc. - Limited by Intel Network Adapter
+- HDMI Output - Impossible, as the port is connected to dGPU
 - Micro SD slot
 - Sleep/Wake when lid Closed/Open (Unsure)
-- Power Management (Unsure)
 - Numpad Calculator related hotkeys
+- ThunderBolt 3
+- Combo Jack audio input
 - Many more which either works but I haven't found out or simply doesn't work
 
 ## Notes:
 
-The fan goes quite hard for most of the time, but it does change the speed based on the temperature of the laptop. This might be related to EC thermal management on my unit as it was set to "Optimal"
+I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
+
+Disabling SSDT-PLUG.aml in ACPI drains my battery faster, but results in a quieter fan noise and better thermal control.
 
 Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
 
