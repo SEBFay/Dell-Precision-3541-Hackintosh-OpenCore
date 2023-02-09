@@ -29,17 +29,23 @@
 - AirDrop, SideCar, etc. - Limited by Intel Network Adapter
 - HDMI Output - Impossible, as the port is connected to dGPU
 - Micro SD slot
-- Sleep/Wake when lid Closed/Open (Unsure)
 - Numpad Calculator related hotkeys
 - ThunderBolt 3
 - Combo Jack audio input
+- Some issues mentioned in itlwm for driver version 0.2.2 for Ventura
 - Many more which either works but I haven't found out or simply doesn't work
+
+## Working in Progress (20/09/2023):
+
+- Update OpenCore version to 0.8.8 (Currently 0.8.7)
+- Kexts: Update Airportitlwm, AlpsHID
+- Inject CPUFriend.kext
+- SSDT patch for disabling dGPU power drawing.
+- Test the compatibility for upgrading to the latest update of macOS
 
 ## Notes:
 
 I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
-
-Disabling SSDT-PLUG.aml in ACPI drains my battery faster, but results in a quieter fan noise and better thermal control.
 
 Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
 
@@ -54,3 +60,4 @@ Use at your own risk, as this set of EFI file only allows you to install, boot i
 - OpenCore --> https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html
 - 国光的黑苹果安装教程 --> https://apple.sqlsec.com/
 - Daliansky - OC-little (Translated by 5T33Z0) --> https://github.com/5T33Z0/OC-Little-Translated
+- OpenIntelWireless - itlwm --> https://github.com/OpenIntelWireless/itlwm

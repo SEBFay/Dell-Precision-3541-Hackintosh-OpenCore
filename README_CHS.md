@@ -25,17 +25,23 @@
 - 隔空投送，随航 和其他Intel网卡驱动不支持的功能
 - HDMI输出 - 接口直连被屏蔽的独立显卡
 - Micro SD卡接口
-- 盒盖睡眠 + 开盖唤醒 （不确定）
 - 关于计算器功能的小键盘快捷键
 - 雷电3
 - 耳机孔输入
+- 一些在itlwm 0.2.2中提到的关于Ventura的问题
 - 还有很多我没有测试的 - 或许可以正常使用
+
+## 正在进行中的工作 (2023-02-09)：
+
+- 更新至OpenCore 0.8.8
+- 核心扩展：更新Airportitlwm, AlpsHID
+- 注入CPUFriend.kext
+- 使用SSDT热补丁来禁用独立显卡的耗电
+- 测试更新到最新版macOS小版本的兼容性
 
 ## 备注:
 
 因为暂时没有Type-C USB3.0设备，雷电3接口现在只能运行在USB2.0速率。
-
-禁用SSDT-PLUG.aml增大了我的耗电率，但风扇转速和温控表现得更好了。
 
 个人认为最合适的仿冒型号是MacBookPro16,4。
 
@@ -50,4 +56,5 @@
 
 - 官方OpenCore安装指南 --> https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html
 - 国光的黑苹果安装教程 --> https://apple.sqlsec.com/
-- 黑锅小兵 - OC-little --> https://github.com/daliansky/OC-little
+- 黑果小兵 - OC-little --> https://github.com/daliansky/OC-little
+- OpenIntelWireless - itlwm --> https://github.com/OpenIntelWireless/itlwm
