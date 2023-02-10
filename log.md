@@ -10,3 +10,10 @@
 - - macOS 13.1 does not require this for power management/thermal control.
 - Kernel: Added in SD card slot related kexts from https://github.com/0xFireWolf/RealtekCardReader, but disabled 
 - - will be working on SD card slot soon.
+
+02-09-2023：
+- OpenCore: Updated to 0.8.8
+- ACPI: Included disable dGPU hotpatch - still testing to see if work and helps battery performance
+- Kexts: Included CPUFriend, Realtek Card Reader; Updated Airportitlwm
+- Added boot-arg "io80211.awdl=0" for better Wi-Fi performance post-boot/wake
+- Tested compatible with macOS 13.2

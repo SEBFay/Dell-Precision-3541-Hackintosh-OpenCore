@@ -1,4 +1,4 @@
-# __Work In Progress__ - macOS Ventura 13.1 - Dell Precision 3451
+# __Work In Progress__ - macOS Ventura 13.2 - Dell Precision 3451
 
 中文Readme请点击 --> [README_CHS.md](https://github.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/blob/main/README_CHS.md)
 
@@ -21,6 +21,7 @@
 - Wi-Fi (Airportitlwm)
 - Bluetooth
 - USB hubs
+- MicroSD Card reader
 - Audio onboard Input/Output - ALC236/3204
 - Combo Jack output - Need to tune the output balance to extreme left or right
 
@@ -28,24 +29,17 @@
 
 - AirDrop, SideCar, etc. - Limited by Intel Network Adapter
 - HDMI Output - Impossible, as the port is connected to dGPU
-- Micro SD slot
 - Numpad Calculator related hotkeys
 - ThunderBolt 3
 - Combo Jack audio input
 - Some issues mentioned in itlwm for driver version 0.2.2 for Ventura
 - Many more which either works but I haven't found out or simply doesn't work
 
-## Working in Progress (20/09/2023):
-
-- Update OpenCore version to 0.8.8 (Currently 0.8.7)
-- Kexts: Update Airportitlwm, AlpsHID
-- Inject CPUFriend.kext
-- SSDT patch for disabling dGPU power drawing.
-- Test the compatibility for upgrading to the latest update of macOS
-
 ## Notes:
 
 I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
+
+Battery life is still very bad after having dGPU disabled with SSDT hotpatch. Still looking for solutions.
 
 Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
 
