@@ -23,7 +23,7 @@
 - USB hubs
 - MicroSD Card reader
 - Audio onboard Input/Output - ALC236/3204
-- Combo Jack output - Need to tune the output balance to extreme left or right
+- Combo Jack output for basic headsets - Need to tune the output balance to extreme left or right
 
 ## What doesn't work & not tested:
 
@@ -31,15 +31,16 @@
 - HDMI Output - Impossible, as the port is connected to dGPU
 - Numpad Calculator related hotkeys
 - ThunderBolt 3
-- Combo Jack audio input
+- Combo Jack audio output if using a higher spec headset - no audio, only buzzing sounds
 - Some issues mentioned in itlwm for driver version 0.2.2 for Ventura
 - Many more which either works but I haven't found out or simply doesn't work
 
 ## Notes:
 
 I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
+ - The USB mapping is still TBD, with TB3 video output fixings on the plan.
 
-Battery life is still very bad after having dGPU disabled with SSDT hotpatch. Still looking for solutions.
+Battery life is still very bad after having dGPU disabled with SSDT hotpatch. Maybe it's just my battery.
 
 Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
 
