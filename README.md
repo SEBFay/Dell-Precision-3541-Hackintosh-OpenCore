@@ -34,8 +34,9 @@
 ## Notes:
 
 I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
+ - The USB mapping is still TBD, with TB3 video output fixings on the plan.
 
-Battery life is still very bad after having dGPU disabled with SSDT hotpatch. Still looking for solutions.
+Battery life is still very bad after having dGPU disabled with SSDT hotpatch. Maybe it's just my battery.
 
 I kept but disabled the intel wifi adapter related kexts in the files. If needed, you can disable the broadcom related kexts and re-enable the intel ones.
 
