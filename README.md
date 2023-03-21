@@ -2,7 +2,7 @@
 
 中文Readme请点击 --> [README_CHS.md](https://github.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/blob/main/README_CHS.md)
 
-<img decoding="async" src="https://www.bhphotovideo.com/images/images1500x1500/dell_sbr57_precision_3541_i7_9850h_16gb_1538045.jpg" width="75%" class="aligncenter">
+<img decoding="async" src="https://raw.githubusercontent.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/main/screenshots/3541hac.png" width="75%" class="aligncenter">
 
 ## Specs:
 
