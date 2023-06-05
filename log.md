@@ -4,8 +4,6 @@
 - 这个日志文件将用英语编写。
 
 
-
-
 ## 12-31-2022：
 - ACPI：Disabled SSDT-PLUG-DRTNIA.aml in config.plist but retained the file in ACPI folder 
 - - macOS 13.1 does not require this for power management/thermal control.
@@ -26,3 +24,9 @@
 - Audio layout-id: Changed to 15 for better combojack output
 - With something else that I did not make notes.
 - Tested compatible with macOS 13.2.1
+
+## 06-05-2023：
+- OpenCore: Updated to 0.9.2
+- Kexts: Updated some of them.
+- readme: Reconstructed and added more info.
+- Tested compatible with macOS 13.4 with minor issues.

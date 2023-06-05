@@ -1,4 +1,4 @@
-# __Work In Progress__ - macOS Ventura 13.2.1 - Dell Precision 3451
+# __Work In Progress__ - macOS Ventura 13.4 - Dell Precision 3451
 
 中文Readme请点击 --> [README_CHS.md](https://github.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/blob/main/README_CHS.md)
 
@@ -6,13 +6,13 @@
 
 ## Specs:
 
-- OpenCore version: 0.9.0
+- OpenCore version: 0.9.2
 - CPU: Intel i7-9750H
 - Audio Codec: Intel ALC236/3204
 - Network Adapter: ~~Intel AC9560 + Bluetooth~~ / BCM94360NG
 - GPU: Intel UHD 630 + ~~nVidia Quadro P620~~
 
-## What works for now, as I have discovered so far:
+## What works with no issues:
 
 - Battery Status
 - Fn Keys (Brightness, Audio, Keyboard backlight)
@@ -21,32 +21,48 @@
 - USB ports (limited support)
 - Audio onboard Input/Output
 - Combo Jack output
+- AirDrop, Handoff, Sidecar & other iService functions
 
-## What doesn't work & not tested:
+## What doesn't work:
 
-- HDMI Output - Impossible, as the port is connected to dGPU
+- HDMI Output - Impossible, as the port is connected to eGPU
 - Numpad Calculator related hotkeys
 - ThunderBolt 3 with video/audio output
 - Combo Jack audio input
 - MicroSD Card reader
 - Many more which either works but I haven't found out or simply doesn't work
 
-## Notes:
+## What works, but with issues: 
 
 I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
- - The USB mapping is still TBD, with TB3 video output fixings on the plan.
+- The USB mapping is still TBD, with TB3 video output fixings on the plan.
 
-Battery life is still very bad after having dGPU disabled with SSDT hotpatch. Maybe it's just my battery.
+After bootup, the screen brightness is broken (Extremely low) for a couple of minutes and will light up again.
+- bootargs: -igfxblr is not working due to some Apple-end issues for Ventura 13.4. See: https://github.com/acidanthera/bugtracker/issues/2241
 
-I kept but disabled the intel wifi adapter related kexts in the files. If needed, you can disable the broadcom related kexts and re-enable the intel ones.
+Trackpad sometimes doesn't listen to you - I suggest to disable "Tap to Click" and solely use the left/right button below or above the trackpad.
+- For me, it will ghost click and ruin my day.
 
-Personally, I think the most suitable model for the system to identify the laptop is MacBookPro16,4.
+Battery life is still very bad after having eGPU disabled with SSDT hotpatch and in bootargs. 
+- Maybe it's just my battery. Please test at your end and give feedback.
 
-Serial Numbers and other unique information are being set to 0 in config.plist - Please generate the info and change the data before use.
+Overall temperature when running is mostly 90°C+ when plugged in for the first few continuous hours, then will reduce to 40-60°C when it wants to.
+- CPU clock would be capped at 0.8 GHz at random and unexpected moments for am unknown period when its at 90°C+ and the whole thing goes unresponsive.
 
-I haven't tested if it's suitable to be in your daily driver, and of course, the whole thing is "work in progress"
+## Notes:
 
-Use at your own risk, as this set of EFI file only allows you to install, boot into macOS with basic functions. 
+I kept the files but disabled the intel wifi adapter related kexts. If needed, you can disable the broadcom related kexts and re-enable the intel ones.
+
+Serial Numbers and other unique information are being set to 0 in config.plist - Please generate the info and change the data before use for iServices.
+
+The whole setup is enough for me as a daily driver, but might not be the case for you - Use at your own risk, as this set of EFI file allows you to install, boot into macOS with normal functions. 
+
+## Disclamers:
+
+I'm not responsible for any bricked devices, dead hard drives, Special Military Operation, or your project getting delayed because the whole thing won't boot up.
+YOU are choosing to make these modifications with my setup, and if you point the finger at me for messing up your device with my EFI setup, I will pray for you being dumb.
+Your Apple ID might be restricted by Apple, there's nothing to do with me.
+Your warranty might be void when you have already fiddled with your device. If the whole laptop dies, bad luck with you.
 
 ## References:
 
