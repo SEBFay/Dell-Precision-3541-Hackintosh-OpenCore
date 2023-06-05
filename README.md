@@ -1,4 +1,4 @@
-# __Work In Progress__ - macOS Ventura 13.4 - Dell Precision 3451
+# macOS Ventura 13.4 - Dell Precision 3451
 
 中文Readme请点击 --> [README_CHS.md](https://github.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/blob/main/README_CHS.md)
 

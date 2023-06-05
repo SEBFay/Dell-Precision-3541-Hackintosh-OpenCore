@@ -1,4 +1,4 @@
-# __未完成__ - macOS Ventura 13.4 - Dell Precision 3451
+# macOS Ventura 13.4 - Dell Precision 3451
 
 ## 配置:
 
