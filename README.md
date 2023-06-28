@@ -1,4 +1,4 @@
-# macOS Ventura 13.4 - Dell Precision 3451
+# macOS Ventura 13.4.1 - Dell Precision 3451
 
 中文Readme请点击 --> [README_CHS.md](https://github.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/blob/main/README_CHS.md)
 
@@ -56,6 +56,8 @@ I kept the files but disabled the intel wifi adapter related kexts. If needed, y
 Serial Numbers and other unique information are being set to 0 in config.plist - Please generate the info and change the data before use for iServices.
 
 The whole setup is enough for me as a daily driver, but might not be the case for you - Use at your own risk, as this set of EFI file allows you to install, boot into macOS with normal functions. 
+
+Currently no plan on testing if this set of EFI file supports macOS Sonoma. If willing to try upgrading, please upgrade OpenCore and the corresponding kexts. More information - See: https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1076
 
 ## Disclamers:
 

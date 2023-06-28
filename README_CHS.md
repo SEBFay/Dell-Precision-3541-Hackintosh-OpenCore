@@ -1,4 +1,4 @@
-# macOS Ventura 13.4 - Dell Precision 3451
+# macOS Ventura 13.4.1 - Dell Precision 3451
 
 ## 配置:
 
@@ -51,7 +51,9 @@
 
 在config.plist中，序列号和其他特殊信息被设定为0 - 请在使用前生成数据并修改文件。
 
-这套EFI文件对于我自己来说是足够日常使用的，但对你来说可能不是这样。使用时风险自负，我只能保证在安装和进入macOS时，这套EFI文件能给你提供基本功能。
+这套EFI文件对于我自己来说是足够日常使用的，但对你来说可能不行。使用时风险自负，我只能保证在安装和进入macOS时，这套EFI文件能给你提供基本功能。
+
+暂无计划开展对macOS Sonoma的支持。如果你想试着去用这套EFI文件去升级到Sonoma，请更新OpenCore版本和相对应的kext文件。更多信息 - 参阅：https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1076
 
 ## 免责声明：
 
