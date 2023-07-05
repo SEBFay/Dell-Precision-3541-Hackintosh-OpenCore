@@ -47,6 +47,8 @@
 
 ## 备注:
 
+__当你发现你的蓝牙出问题的时候，请看这里：__ https://osxlatitude.com/forums/topic/18225-enable-bluetooth-in-macos-ventura-134-for-broadcom-intel-bluetooth-intel-bluetooth-fix/ & https://github.com/acidanthera/BrcmPatchRAM/pull/28
+
 我在文件中保留，但在config.plist里禁用了对英特尔网卡支持所需的kext文件。有需要可以将博通相关kext禁用后自行启用。
 
 在config.plist中，序列号和其他特殊信息被设定为0 - 请在使用前生成数据并修改文件。

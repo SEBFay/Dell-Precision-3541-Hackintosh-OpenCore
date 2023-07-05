@@ -51,6 +51,8 @@ Overall temperature when running is mostly 90°C+ when plugged in for the first 
 
 ## Notes:
 
+__If you find your bluetooth not working, you may need to look at these:__ https://osxlatitude.com/forums/topic/18225-enable-bluetooth-in-macos-ventura-134-for-broadcom-intel-bluetooth-intel-bluetooth-fix/ & https://github.com/acidanthera/BrcmPatchRAM/pull/28
+
 I kept the files but disabled the intel wifi adapter related kexts. If needed, you can disable the broadcom related kexts and re-enable the intel ones.
 
 Serial Numbers and other unique information are being set to 0 in config.plist - Please generate the info and change the data before use for iServices.
