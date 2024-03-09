@@ -3,6 +3,8 @@
 - 这个日志文件于2022年12月31日开始更新。在此之前对EFI文件及其配置的更改信息请参阅之前的commits。
 - 这个日志文件将用英语编写。
 
+- Date Format / 日期格式: MM-dd-YYYY
+
 
 ## 12-31-2022：
 - ACPI：Disabled SSDT-PLUG-DRTNIA.aml in config.plist but retained the file in ACPI folder 
@@ -30,6 +32,11 @@
 - Kexts: Updated some of them.
 - readme: Reconstructed and added more info.
 - Tested compatible with macOS 13.4 with minor issues.
+
+## 10-09-2023:
+- Updated readme.md & readme_chs.md with grammar/spelling check.
+- Tested compatible with macOS 13.6.
+- Will be working on ThunderBolt 3 hotplug & video/audio output.
 
 ## 03-09-2024:
 - OpenCore: Updated to 0.9.8
