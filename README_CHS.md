@@ -1,8 +1,8 @@
-# macOS Ventura 13.4.1 - Dell Precision 3451
+# macOS Sonoma 14.4 - Dell Precision 3451
 
 ## 配置:
 
-- OpenCore版本： 0.9.2
+- OpenCore版本： 0.9.8
 - CPU: Intel i7-9750H
 - 音频编码: Intel ALC236/3204
 - 网卡: ~~Intel AC9560 + 蓝牙~~ / BCM94360NG
@@ -18,6 +18,7 @@
 - 声卡驱动（内置输入/输出）
 - 耳机孔输出
 - 隔空投送, 连续互通，随航等iService功能
+- Apple Watch解锁
 
 ## 现在没发现问题/不能正常使用的功能:
 
@@ -26,6 +27,7 @@
 - 雷电3 + 视/音频输出
 - 耳机孔输入
 - MicroSD 卡槽
+- Apple Music和其他DRM视频/音频内容
 - 还有很多我没有测试的 - 或许可以正常使用
 
 ## 现在可以使用，但有点问题的功能: 
@@ -33,8 +35,10 @@
 因为暂时没有Type-C USB3.0设备，雷电3接口现在只能运行在USB2.0速率。
 - 正在准备制作完整USB映射文件，包括修复雷电3接口的视频输出。
 
-开机之后的几分钟内，屏幕亮度会被强制设定为最低且不能更改 - 过了几分钟之后会自动修复。
-- bootargs: -igfxblr 不适配Ventura 13.4。 参阅: https://github.com/acidanthera/bugtracker/issues/2241。
+~~开机之后的几分钟内，屏幕亮度会被强制设定为最低且不能更改 - 过了几分钟之后会自动修复。~~
+- ~~bootargs: -igfxblr 不适配Ventura 13.4。 参阅: [这里](https://github.com/acidanthera/bugtracker/issues/2241)。~~
+
+背光问题已经解决，替换bootarg “-igfxblr"为“-igfxblt”即可。
 
 触摸板有些时候会闹脾气 - 建议关闭“轻点来点按”，并只使用触摸板上下的两对鼠标按键。
 - 对我而言，当打开“轻点来点按”功能时，它会鬼触，然后我就急了。
@@ -47,15 +51,22 @@
 
 ## 备注:
 
-__当你发现你的蓝牙出问题的时候，请看这里：__ https://osxlatitude.com/forums/topic/18225-enable-bluetooth-in-macos-ventura-134-for-broadcom-intel-bluetooth-intel-bluetooth-fix/ & https://github.com/acidanthera/BrcmPatchRAM/pull/28
+__当你发现你的蓝牙出问题的时候:（此处案例为BCM94360NG）__
+1. 请尝试在“系统信息-蓝牙”中查找地址和固件版本，如果为null和v0 c0:
+    - 在“系统信息-USB”中寻找“BRCM20702 Hub”，如果没有此项目：
+        - 关机，拆去后盖，拔掉电池，长按电源键10秒，插回电池，开机。
+2. 如果“系统信息-蓝牙”中的内容一切正常，“系统信息-USB”中也存在“BRCM20702 Hub”项，但依旧无法连接AirPods或其他设备：
+    - 打开终端并输入“sudo purge”和/或“sudo pkill bluetoothd"。
 
-我在文件中保留，但在config.plist里禁用了对英特尔网卡支持所需的kext文件。有需要可以将博通相关kext禁用后自行启用。
+~~我在文件中保留，但在config.plist里禁用了对英特尔网卡支持所需的kext文件。有需要可以将博通相关kext禁用后自行启用。~~  
+在config.plist里已经删除英特尔网卡对应项。
 
 在config.plist中，序列号和其他特殊信息被设定为0 - 请在使用前生成数据并修改文件。
 
 这套EFI文件对于我自己来说是足够日常使用的，但对你来说可能不行。使用时风险自负，我只能保证在安装和进入macOS时，这套EFI文件能给你提供基本功能。
 
-暂无计划开展对macOS Sonoma的支持。如果你想试着去用这套EFI文件去升级到Sonoma，请更新OpenCore版本和相对应的kext文件。更多信息 - 参阅：https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1076
+~~暂无计划开展对macOS Sonoma的支持。如果你想试着去用这套EFI文件去升级到Sonoma，请更新OpenCore版本和相对应的kext文件。更多信息 - 参阅：https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1076~~  
+现已支持macOS Sonoma。安装/升级后请参考 [EliteMacX86(英文)](https://elitemacx86.com/threads/how-to-fix-broadcom-wifi-on-macos-sonoma-and-later.1415/) 或者[cnblogs(中文)](https://www.cnblogs.com/wkvip/p/17787077.html) 来启用WiFi功能。
 
 ## 免责声明：
 

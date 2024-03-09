@@ -1,4 +1,4 @@
-# macOS Ventura 13.4.1 - Dell Precision 3451
+# macOS Ventura 14.4 - Dell Precision 3451
 
 中文Readme请点击 --> [README_CHS.md](https://github.com/SEBFay/Dell-Precision-3541-Hackintosh-OpenCore/blob/main/README_CHS.md)
 
@@ -6,7 +6,7 @@
 
 ## Specs:
 
-- OpenCore version: 0.9.2
+- OpenCore version: 0.9.8
 - CPU: Intel i7-9750H
 - Audio Codec: Intel ALC236/3204
 - Network Adapter: ~~Intel AC9560 + Bluetooth~~ / BCM94360NG
@@ -22,6 +22,7 @@
 - Audio onboard Input/Output
 - Combo Jack output
 - AirDrop, Handoff, Sidecar & other iService functions
+- Apple Watch unlocking
 
 ## What doesn't work:
 
@@ -30,6 +31,7 @@
 - ThunderBolt 3 with video/audio output
 - Combo Jack audio input
 - MicroSD Card reader
+- Apple Music and other DRM contents
 - Many more which either works but I haven't found out or simply doesn't work
 
 ## What works, but with issues: 
@@ -37,8 +39,10 @@
 I do not have any USB3.0 Type-C devices ATM, so the ThunderBolt 3 port only runs at USB2.0 for now.
 - The USB mapping is still TBD, with TB3 video output fixings on the plan.
 
-After bootup, the screen brightness is broken (Extremely low) for a couple of minutes and will light up again.
-- bootargs: -igfxblr is not working due to some Apple-end issues for Ventura 13.4. See: https://github.com/acidanthera/bugtracker/issues/2241
+~~After bootup, the screen brightness is broken (Extremely low) for a couple of minutes and will light up again.~~
+- ~~bootargs: -igfxblr is not working due to some Apple-end issues for Ventura 13.4. See: [here](https://github.com/acidanthera/bugtracker/issues/2241)~~
+
+Backlight issue is now solved, simply replace "-igfxblr" to "-igfxblt" in bootargs.
 
 Trackpad sometimes doesn't listen to you - I suggest to disable "Tap to Click" and solely use the left/right button below or above the trackpad.
 - For me, it will ghost click and ruin my day.
@@ -51,15 +55,22 @@ Overall temperature when running is mostly 90°C+ when plugged in for the first 
 
 ## Notes:
 
-__If you find your bluetooth not working, you may need to look at these:__ https://osxlatitude.com/forums/topic/18225-enable-bluetooth-in-macos-ventura-134-for-broadcom-intel-bluetooth-intel-bluetooth-fix/ & https://github.com/acidanthera/BrcmPatchRAM/pull/28
+__If you find your bluetooth not working: (BCM94360 in this case)__
+1. Go to "System Information - Bluetooth" for Address and Firmware Version, if see "null" and "v0 c0":
+- Look for "BRCM20702 Hub" in "System Information - USB", if absent:
+        - Shutdown, remove bottom cover, disconnect the battery, press the power button for 10s，connect the battery, boot up。
+2. If everything looks fine in "System Information - Bluetooth" and "BRCM20702 Hub"is present in "System Information - USB", but still unable to connect to AirPods or other peripherals:
+    - Go to Terminal, type in "sudo purge" and/or "sudo pkill bluetoothd"
 
-I kept the files but disabled the intel wifi adapter related kexts. If needed, you can disable the broadcom related kexts and re-enable the intel ones.
+~~I kept the files but disabled the intel wifi adapter related kexts. If needed, you can disable the broadcom related kexts and re-enable the intel ones.~~  
+Intel-related WiFi drivers/kexts are now removed in config.plist.
 
 Serial Numbers and other unique information are being set to 0 in config.plist - Please generate the info and change the data before use for iServices.
 
 The whole setup is enough for me as a daily driver, but might not be the case for you - Use at your own risk, as this set of EFI file allows you to install, boot into macOS with normal functions. 
 
-Currently no plan on testing if this set of EFI file supports macOS Sonoma. If willing to try upgrading, please upgrade OpenCore and the corresponding kexts. More information - See: https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1076
+~~Currently no plan on testing if this set of EFI file supports macOS Sonoma. If willing to try upgrading, please upgrade OpenCore and the corresponding kexts. More information - See: https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1076~~  
+Now supports macOS Sonoma. For Post-Upgrade/Install please read [EliteMacX86](https://elitemacx86.com/threads/how-to-fix-broadcom-wifi-on-macos-sonoma-and-later.1415/) to have your WiFi working.
 
 ## Disclamers:
 

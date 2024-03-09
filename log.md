@@ -30,3 +30,10 @@
 - Kexts: Updated some of them.
 - readme: Reconstructed and added more info.
 - Tested compatible with macOS 13.4 with minor issues.
+
+## 03-09-2024:
+- OpenCore: Updated to 0.9.8
+- Kexts: Updated some of them, deleted Intel Wireless related ones and unused Voodoo PS2 controllers
+- config: Added support for macOS Sonoma WiFi, Disabled SIP for post-install/upgrade OCLP Patch
+- bootarg: -igfxblr replaced by -igfxblt, added -igfxbls for smooth brightness control. See： [WhateverGreen](https://github.com/acidanthera/WhateverGreen?tab=readme-ov-file#global)
+- Tested compatible with macOS 14.4
