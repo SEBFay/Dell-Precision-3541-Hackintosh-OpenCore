@@ -44,3 +44,8 @@
 - config: Added support for macOS Sonoma WiFi, Disabled SIP for post-install/upgrade OCLP Patch
 - bootarg: -igfxblr replaced by -igfxblt, added -igfxbls for smooth brightness control. See： [WhateverGreen](https://github.com/acidanthera/WhateverGreen?tab=readme-ov-file#global)
 - Tested compatible with macOS 14.4
+
+## 03-29-2024:
+- OpenCOre: Updated to 0.9.9
+- Kexts: Updated some of them, deleted IntelSnowMausi.kext
+- Changed SMBIOS to MacBookPro16,3 for Type-C to DP

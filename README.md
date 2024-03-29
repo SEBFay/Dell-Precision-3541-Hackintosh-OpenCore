@@ -6,11 +6,12 @@
 
 ## Specs:
 
-- OpenCore version: 0.9.8
+- OpenCore version: 0.9.9
 - CPU: Intel i7-9750H
 - Audio Codec: Intel ALC236/3204
 - Network Adapter: ~~Intel AC9560 + Bluetooth~~ / BCM94360NG
 - GPU: Intel UHD 630 + ~~nVidia Quadro P620~~
+- Mocked Mac Model: MacBookPro16,3
 
 ## What works with no issues:
 
@@ -23,12 +24,12 @@
 - Combo Jack output
 - AirDrop, Handoff, Sidecar & other iService functions
 - Apple Watch unlocking
+- Type-C to DisplayPort
 
 ## What doesn't work:
 
-- HDMI Output - I have confirmed that the port is wired to iGPU, tried every bus-id possible but still no luck.
-- Numpad Calculator related hotkeys
-- ThunderBolt 3 with video/audio output
+- HDMI Output - I have confirmed that the port is wired to iGPU, tried every bus-id possible but still no luck. If you wish to use an external display, use Type-C to DP instead.
+- NumPad Calculator related hotkeys
 - Combo Jack audio input
 - MicroSD Card reader
 - Apple Music and other DRM contents
