@@ -26,7 +26,7 @@
 
 ## What doesn't work:
 
-- HDMI Output - Impossible, as the port is connected to dGPU
+- HDMI Output - I have confirmed that the port is wired to iGPU, tried every bus-id possible but still no luck.
 - Numpad Calculator related hotkeys
 - ThunderBolt 3 with video/audio output
 - Combo Jack audio input
